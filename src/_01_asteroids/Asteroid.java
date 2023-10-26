@@ -38,6 +38,7 @@ public class Asteroid {
 		angle = random.nextInt(360);
 		xSpeed = (int) (Math.cos(Math.toRadians(angle)) * speed);
 		ySpeed = (int) (Math.sin(Math.toRadians(angle)) * speed);
+		
 	}
 
 	void update() {
