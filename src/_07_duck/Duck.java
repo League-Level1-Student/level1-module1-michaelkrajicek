@@ -17,6 +17,10 @@ public class Duck {
 		System.out.println("The duck waddles towards his " + numberOfFriends + " friend(s).");
 	}
 	
+	void greet(Cephalopod pod) {
+		System.out.println("The duck says hi to the " + pod.typeOfAnimal);
+	}
+	
 }
 
 class Cephalopod {
