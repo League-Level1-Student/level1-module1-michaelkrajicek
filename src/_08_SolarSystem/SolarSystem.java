@@ -67,14 +67,14 @@ public class SolarSystem implements GameControlScene {
     Game gameFrame = new Game("Solar System");
     
     
-    Planet mercury = new Planet(4879/1000, Color.DARK_GRAY, 579/10, 88);
-    Planet venus = new Planet(12104/1000, Color.yellow, 1082/10, 225);
-    Planet earth = new Planet(12756/1000, Color.BLUE, 1496/10, 365);
-    Planet mars = new Planet(6792/1000, Color.ORANGE, 2279/10, 687);
-    Planet jupiter = new Planet(142984/1000, Color.ORANGE, 7786/10, 4331);
-    Planet saturn = new Planet(120536/1000, Color.LIGHT_GRAY, 14335/10, 10747);
-    Planet uranus = new Planet(51118/1000, Color.cyan, 28725/10, 30589);
-    Planet neptune = new Planet(49528/1000, Color.BLUE, 44951/10, 59800);
+    Planet mercury = new Planet(4879/1000, Color.DARK_GRAY, 579/10, 88, 0);
+    Planet venus = new Planet(12104/1000, Color.yellow, 1082/10, 225, 0);
+    Planet earth = new Planet(12756/1000, Color.BLUE, 1496/10, 365, 1);
+    Planet mars = new Planet(6792/1000, Color.ORANGE, 2279/10, 687, 2);
+    Planet jupiter = new Planet(142984/1000, Color.ORANGE, 7786/10, 4331, 79);
+    Planet saturn = new Planet(120536/1000, Color.LIGHT_GRAY, 14335/10, 10747, 82);
+    Planet uranus = new Planet(51118/1000, Color.cyan, 28725/10, 30589, 27);
+    Planet neptune = new Planet(49528/1000, Color.BLUE, 44951/10, 59800, 14);
     
     
     public SolarSystem() {
@@ -82,10 +82,21 @@ public class SolarSystem implements GameControlScene {
         gameFrame.start();
         gameFrame.setSize(DISPLAY_WIDTH, DISPLAY_HEIGHT);
         
+        //Add other planet's moons
+        
+        
         /*
          * Add Earth's moon
          */
-        earth.addMoon();
+        
+        /* 
+       earth.addMoon();
+        mars.addMoon();
+        jupiter.addMoon();
+        saturn.addMoon();
+        uranus.addMoon();
+        neptune.addMoon();  
+        */
         
         sunX = CENTER_X - SUN_RADIUS_PIXELS;
         sunY = CENTER_Y - SUN_RADIUS_PIXELS;

@@ -14,12 +14,16 @@ public class Planet {
     Color planetColor;
     int distance;
     int orbitalPeriod;
+    int numberOfMoons;
     
-    public Planet(int diameterPixels,Color planetColor,int distance, int orbitalPeriod) {
+    public Planet(int diameterPixels,Color planetColor,int distance, int orbitalPeriod, int numberOfMoons) {
         this.diameter = diameterPixels;
         this.planetColor = planetColor;
         this.distance = distance;
         this.orbitalPeriod = orbitalPeriod;
+        for(int i = 0; i < numberOfMoons; i++) {
+        	addMoon();
+        };
     }
 
     public void draw(Graphics g, int numDays) {
@@ -83,12 +87,14 @@ public class Planet {
     
     class Moon {
         Color moonColor;
+        
         int numMoons, moonDiameter, distPlanetToMoon, moonDaysToOrbit, daysOffset;
         
         public Moon() {
             Random rand = new Random();
+           
             this.moonColor = Color.WHITE;
-            this.moonDiameter = 5;
+            this.moonDiameter = 3;
             this.distPlanetToMoon = (diameter/2) + 10;
             this.moonDaysToOrbit = 50;                 // arbitrarily chosen
             this.daysOffset = rand.nextInt(365);
